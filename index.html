@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#123b2b">
+<meta name="description" content="Conheça as cinco opções de investimento do Banco Vértice, veja uma carteira ilustrativa de R$ 10.000 e explore o simulador de juros compostos.">
+<title>Banco Vértice — Investimentos e matemática financeira</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 36'%3E%3Crect width='36' height='36' rx='9' fill='%2313392a'/%3E%3Cpath d='M8 11h5l5 11 5-11h5l-8 16h-4z' fill='%23ddf09a'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="app.js" defer></script>
+</head>
+<body>
+<svg class="icon-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs>
+<symbol id="mark" viewBox="0 0 24 24"><path d="M3 5h4l5 11 5-11h4l-7 15h-4z" fill="currentColor" stroke="none"/></symbol>
+<symbol id="building" viewBox="0 0 24 24"><path d="M3 21h18M6 21V4h9v17m0-12h4v12M9 8h3m-3 4h3m-3 4h3"/></symbol>
+<symbol id="layers" viewBox="0 0 24 24"><path d="m12 3 9 5-9 5-9-5 9-5Zm-9 9 9 5 9-5m-18 4 9 5 9-5"/></symbol>
+<symbol id="chart" viewBox="0 0 24 24"><path d="M3 4v16h18M7 15l4-5 4 2 5-6"/></symbol>
+<symbol id="menu" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></symbol>
+<symbol id="screen" viewBox="0 0 24 24"><path d="M4 4h16v12H4zM12 16v4m-4 0h8"/></symbol>
+<symbol id="wallet" viewBox="0 0 24 24"><path d="M20 8V5H6a3 3 0 0 0 0 6h15v9H6a3 3 0 0 1-3-3V8m18 6h-5v3h5"/></symbol>
+<symbol id="bank" viewBox="0 0 24 24"><path d="m3 9 9-5 9 5H3Zm2 11h14M7 12v5m5-5v5m5-5v5"/></symbol>
+<symbol id="shield" viewBox="0 0 24 24"><path d="M12 3 4 6v5c0 5 3 8 8 10 5-2 8-5 8-10V6l-8-3Zm-3 9 2 2 4-4"/></symbol>
+</defs></svg>
+<header class="top">
+  <div class="shell head">
+    <a class="logo" href="#inicio"><span class="logo-mark" aria-hidden="true"><svg><use href="#mark"/></svg></span>Banco Vértice<span class="dot" aria-hidden="true">.</span></a>
+    <button class="menu" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Abrir menu"><svg><use href="#menu"/></svg></button>
+    <nav id="site-nav" aria-label="Navegação principal">
+      <a href="#fundos">Investimentos</a><a href="#carteira">Caso de R$ 10 mil</a><a href="#simulador">Simulador</a><a href="#roteiro">Roteiro</a>
+    </nav>
+    <button class="btn btn-outline presentation" type="button"><svg><use href="#screen"/></svg><span>Apresentar</span></button>
+  </div>
+</header>
+<main id="inicio">
+  <section class="hero shell" aria-labelledby="hero-title">
+    <div class="hero-copy">
+      <p class="eyebrow"><span></span> BANCO VÉRTICE · PARCEIRO EM SEUS INVESTIMENTOS</p>
+      <h1 id="hero-title">Investir com<br> <em>inteligência.</em></h1>
+      <p class="intro">Conheça cinco formas de investir com o Banco Vértice e descubra como montar uma carteira para diferentes objetivos, do dinheiro disponível para resgate ao crescimento de longo prazo.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#carteira">Ver o caso dos R$ 10 mil</a>
+        <a class="text-link" href="#fundos">Conhecer os investimentos</a>
+      </div>
+    </div>
+    <figure class="hero-visual">
+      <img src="cidade.webp" alt="Torres comerciais de vidro vistas da rua, com reflexos verdes e luz dourada" width="1200" height="960" fetchpriority="high">
+      <figcaption class="photo-card">
+        <span class="photo-icon"><svg><use href="#chart"/></svg></span>
+        <span><strong>Banco Vértice</strong><small>Investimentos para diferentes prazos</small></span>
+      </figcaption>
+    </figure>
+  </section>
+
+  <section id="campanha" class="campaign shell" aria-labelledby="campaign-title">
+    <span class="campaign-mark" aria-hidden="true"><svg><use href="#mark"/></svg></span>
+    <div class="campaign-copy">
+      <p class="eyebrow">CAMPANHA BANCO VÉRTICE</p>
+      <h2 id="campaign-title">Seu dinheiro, <em>com direção.</em></h2>
+      <p>Tenha opções para o dinheiro que pode fazer falta amanhã e para os planos que levam anos. Conheça os prazos, compare os riscos e monte sua estratégia com o Vértice.</p>
+    </div>
+    <a class="btn campaign-cta" href="#fundos">Explore as cinco opções</a>
+  </section>
+
+  <section id="fundos" class="funds section" aria-labelledby="funds-title">
+    <div class="shell">
+      <div class="section-start">
+        <p class="eyebrow"><span></span> INVESTIMENTOS DO BANCO VÉRTICE</p>
+        <h2 id="funds-title">Cinco formas <em>de investir.</em></h2>
+        <p>O banco oferece fundos negociados em bolsa, um título bancário e dois títulos públicos. Compare como cada modalidade funciona, o que ela oferece e quais riscos você assume.</p>
+      </div>
+      <div class="fund-grid">
+        <article id="fii" class="fund-card">
+          <div class="fund-top"><span class="tile"><svg><use href="#building"/></svg></span><span class="tag">FII</span></div>
+          <h3>Fundos imobiliários</h3>
+          <p>Um FII pode investir em imóveis, como galpões e shoppings, ou em títulos ligados ao setor. O cotista pode receber parte do resultado distribuído pelo fundo.</p>
+          <div class="example">
+            <strong>Quanto rendeu neste mês?</strong>
+            <p>Se uma cota de R$ 100 distribuiu R$ 0,80, o rendimento do mês foi de <b>0,8%</b> sobre o preço de compra.</p>
+            <span class="formula">0,80 ÷ 100 × 100 = 0,8%</span>
+          </div>
+          <p class="benefit"><strong>Vantagens</strong> Exposição ao mercado imobiliário com a compra de cotas e possibilidade de receber rendimentos.</p>
+          <p class="risk"><strong>Riscos</strong> Vacância, inadimplência e queda no preço da cota. A distribuição pode variar.</p>
+        </article>
+        <article id="etf" class="fund-card">
+          <div class="fund-top"><span class="tile tile-gold"><svg><use href="#layers"/></svg></span><span class="tag tag-gold">ETF</span></div>
+          <h3>Fundos de índice</h3>
+          <p>Um ETF busca acompanhar um índice de referência. Um ETF amplo de ações, por exemplo, dá exposição a várias empresas em uma única compra.</p>
+          <div class="example example-gold">
+            <strong>Quanto a cota valorizou?</strong>
+            <p>Se uma cota passa de R$ 100 para R$ 108, a valorização é de <b>8%</b>, antes de impostos e custos de negociação.</p>
+            <span class="formula">(108 − 100) ÷ 100 × 100 = 8%</span>
+          </div>
+          <p class="benefit"><strong>Vantagens</strong> Um ETF de índice amplo permite investir em várias empresas em uma única operação.</p>
+          <p class="risk"><strong>Riscos</strong> Quedas no índice, concentração em um setor e, conforme o fundo, variação cambial.</p>
+        </article>
+      </div>
+      <div class="fund-grid fixed-income-grid">
+        <article id="cdb" class="fund-card">
+          <div class="fund-top"><span class="tile"><svg><use href="#wallet"/></svg></span><span class="tag">RENDA FIXA</span></div>
+          <h3>CDB com liquidez diária</h3>
+          <p>Você empresta dinheiro ao banco emissor e recebe juros. Um CDB pós-fixado pode pagar, por exemplo, 100% do CDI bruto. O resgate segue os horários e prazos do contrato.</p>
+          <p class="benefit"><strong>Vantagens</strong> Permite resgatar em dias úteis nas condições contratadas. CDBs elegíveis têm cobertura do FGC dentro dos limites e regras vigentes.</p>
+          <p class="risk"><strong>Riscos</strong> O emissor pode deixar de pagar. A cobertura tem limites e o ressarcimento pode demorar. Se o CDI cair, o rendimento também tende a diminuir.</p>
+        </article>
+        <article id="selic" class="fund-card">
+          <div class="fund-top"><span class="tile"><svg><use href="#bank"/></svg></span><span class="tag">RENDA FIXA</span></div>
+          <h3>Tesouro Selic</h3>
+          <p>Você empresta dinheiro ao governo federal por meio do Tesouro Direto. A remuneração do título acompanha a taxa Selic, conforme as condições de compra.</p>
+          <p class="benefit"><strong>Vantagens</strong> Pode ser vendido antes do vencimento nas condições do Tesouro Direto e costuma oscilar menos que títulos públicos de prazo longo.</p>
+          <p class="risk"><strong>Riscos</strong> O preço pode variar no resgate antecipado. Uma Selic menor reduz o rendimento futuro. Há risco de crédito do governo federal.</p>
+        </article>
+        <article id="ipca" class="fund-card">
+          <div class="fund-top"><span class="tile tile-gold"><svg><use href="#shield"/></svg></span><span class="tag tag-gold">RENDA FIXA</span></div>
+          <h3>Tesouro IPCA+</h3>
+          <p>É um título público que combina a variação do IPCA com uma taxa real definida na compra, quando mantido até o vencimento.</p>
+          <p class="benefit"><strong>Vantagens</strong> Ajuda a preservar o poder de compra e dá previsibilidade ao ganho real bruto quando o vencimento coincide com a data da meta.</p>
+          <p class="risk"><strong>Riscos</strong> Se os juros de mercado subirem, o preço do título pode cair. Vender antes do vencimento pode gerar perda. Há risco de crédito do governo federal.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="comparar" class="section compare shell" aria-labelledby="compare-title">
+    <div class="section-start">
+      <p class="eyebrow"><span></span> COMPARATIVO</p>
+      <h2 id="compare-title">Onde cada fundo <em>faz sentido?</em></h2>
+      <p>Um FII pode complementar uma carteira com exposição imobiliária. Um ETF de índice amplo facilita a diversificação entre empresas ou outros ativos.</p>
+    </div>
+    <div class="table-wrap">
+      <table aria-labelledby="compare-title">
+        <thead><tr><th scope="col">Critério</th><th scope="col">FII</th><th scope="col">ETF</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Exposição</th><td>Imóveis e ativos do setor imobiliário</td><td>Ativos do índice de referência</td></tr>
+          <tr><th scope="row">Fontes de retorno</th><td>Distribuições e variação da cota</td><td>Variação da cota e eventuais distribuições previstas pelo fundo</td></tr>
+          <tr><th scope="row">Diversificação</th><td>Depende dos imóveis, locatários ou títulos do fundo</td><td>Depende da composição e dos pesos do índice</td></tr>
+          <tr><th scope="row">Antes de investir</th><td>Confira a carteira, a gestão e a liquidez</td><td>Confira o índice, as taxas e a liquidez</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <aside class="diversification">
+      <div>
+        <h3>O peso de cada ativo faz diferença</h3>
+        <p>Se uma ação cai 20% e representa só 5% de um índice, ela tira 1 ponto percentual do índice, supondo que os demais ativos fiquem estáveis. Basta multiplicar a queda pelo peso da ação.</p>
+      </div>
+      <span class="formula">5% × (−20%) = −1 p.p.</span>
+    </aside>
+  </section>
+
+  <section id="carteira" class="section portfolio" aria-labelledby="portfolio-title">
+    <div class="shell">
+      <div class="section-start portfolio-intro">
+        <div>
+          <p class="eyebrow"><span></span> CASO HIPOTÉTICO · PROPOSTA DO PROFESSOR</p>
+          <h2 id="portfolio-title">Um cliente chegou com <em>R$ 10.000.</em></h2>
+          <p>Para o exercício, o cliente tem perfil moderado, já possui reserva de emergência e consegue manter a parcela voltada ao crescimento investida por pelo menos cinco anos.</p>
+        </div>
+        <div class="portfolio-objective">
+          <strong>Qual é o objetivo?</strong>
+          <p>Manter parte do dinheiro acessível, proteger o poder de compra de uma meta de longo prazo e buscar crescimento e possíveis rendimentos com uma parcela menor em renda variável.</p>
+        </div>
+      </div>
+      <div class="portfolio-heading">
+        <h3>Onde investiríamos e quanto?</h3>
+        <p>55% em aplicações com maior facilidade de resgate, 20% atrelados à inflação e 25% em renda variável.</p>
+      </div>
+      <div class="allocation-track" aria-hidden="true">
+        <span class="alloc-cdb">30%</span><span class="alloc-selic">25%</span><span class="alloc-ipca">20%</span><span class="alloc-etf">15%</span><span class="alloc-fii">10%</span>
+      </div>
+      <ul class="allocation" aria-label="Distribuição dos R$ 10.000 e riscos assumidos">
+        <li>
+          <a href="#cdb"><span class="alloc-cdb" aria-hidden="true"></span>CDB com liquidez diária</a>
+          <p class="allocation-value"><strong>R$ 3.000</strong> <small>30%</small></p>
+          <p><strong>Objetivo</strong> Ter uma parcela disponível para resgate durante o plano.</p>
+          <p><strong>Risco</strong> Inadimplência do emissor e queda do rendimento se o CDI cair.</p>
+        </li>
+        <li>
+          <a href="#selic"><span class="alloc-selic" aria-hidden="true"></span>Tesouro Selic</a>
+          <p class="allocation-value"><strong>R$ 2.500</strong> <small>25%</small></p>
+          <p><strong>Objetivo</strong> Manter flexibilidade com um título público de menor oscilação.</p>
+          <p><strong>Risco</strong> Oscilação no resgate antecipado e risco de crédito do governo.</p>
+        </li>
+        <li>
+          <a href="#ipca"><span class="alloc-ipca" aria-hidden="true"></span>Tesouro IPCA+</a>
+          <p class="allocation-value"><strong>R$ 2.000</strong> <small>20%</small></p>
+          <p><strong>Objetivo</strong> Proteger o poder de compra da meta, escolhendo um vencimento compatível.</p>
+          <p><strong>Risco</strong> Perda na venda antecipada se o preço cair e risco de crédito do governo.</p>
+        </li>
+        <li>
+          <a href="#etf"><span class="alloc-etf" aria-hidden="true"></span>ETF amplo de ações brasileiras</a>
+          <p class="allocation-value"><strong>R$ 1.500</strong> <small>15%</small></p>
+          <p><strong>Objetivo</strong> Buscar crescimento com exposição a várias empresas em uma única compra.</p>
+          <p><strong>Risco</strong> Queda do mercado de ações e concentração do índice em empresas ou setores.</p>
+        </li>
+        <li>
+          <a href="#fii"><span class="alloc-fii" aria-hidden="true"></span>FII de imóveis locados</a>
+          <p class="allocation-value"><strong>R$ 1.000</strong> <small>10%</small></p>
+          <p><strong>Objetivo</strong> Ter exposição imobiliária e possibilidade de receber rendimentos.</p>
+          <p><strong>Risco</strong> Vacância, atraso nos aluguéis e queda no valor da cota.</p>
+        </li>
+      </ul>
+      <div class="allocation-total"><span>Total da carteira</span><strong>R$ 10.000 <small>· 100%</small></strong></div>
+      <div class="portfolio-lesson">
+        <p><strong>Quanto uma queda poderia custar?</strong> Se só o ETF cair 20%, a perda será de R$ 300 (20% de R$ 1.500). Mantendo o restante da carteira estável, o total cai para <strong>R$ 9.700</strong>, uma queda de 3%.</p>
+        <a class="btn btn-outline" id="load-case" href="#simulador">Simular com R$ 10 mil</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="simulador" class="section simulator" aria-labelledby="sim-title">
+    <div class="shell">
+      <div class="section-start">
+        <p class="eyebrow"><span></span> SIMULADOR</p>
+        <h2 id="sim-title">O poder dos <em>juros compostos.</em></h2>
+        <p>Mude o aporte, o prazo e a taxa para ver quanto o saldo poderia crescer ou cair. Os cenários usam taxas hipotéticas.</p>
+      </div>
+      <div class="sim-grid">
+        <div class="sim-controls">
+          <fieldset>
+            <legend>Cenário de retorno anual</legend>
+            <div class="scenarios">
+              <button type="button" data-rate="-5" aria-pressed="false">Queda</button>
+              <button type="button" data-rate="6" aria-pressed="false">Moderado</button>
+              <button type="button" data-rate="10" aria-pressed="true">Otimista</button>
+            </div>
+          </fieldset>
+          <label class="control" for="initial"><span>Investimento inicial</span><output id="initial-out" for="initial">R$ 1.000</output><input id="initial" type="range" min="0" max="20000" step="500" value="1000"></label>
+          <label class="control" for="monthly"><span>Aporte mensal</span><output id="monthly-out" for="monthly">R$ 200</output><input id="monthly" type="range" min="0" max="2000" step="50" value="200"></label>
+          <label class="control" for="years"><span>Prazo</span><output id="years-out" for="years">10 anos</output><input id="years" type="range" min="1" max="30" step="1" value="10"></label>
+          <label class="control" for="rate"><span>Taxa anual hipotética</span><output id="rate-out" for="rate">10% a.a.</output><input id="rate" type="range" min="-20" max="20" step="0.5" value="10"></label>
+        </div>
+        <div class="sim-result">
+          <div class="metrics" aria-live="polite" aria-atomic="true">
+            <p class="main-metric"><span>Saldo final simulado</span><strong id="balance-out">R$ 42.566,51</strong></p>
+            <p><span>Total aportado</span><strong id="provided-out">R$ 25.000,00</strong></p>
+            <p><span>Ganho ou perda</span><strong id="gain-out">R$ 17.566,51</strong></p>
+          </div>
+          <svg id="growth-chart" viewBox="0 0 620 235" role="img" aria-labelledby="chart-title">
+            <title id="chart-title">Evolução do saldo simulado ao longo do tempo</title>
+          </svg>
+          <div class="legend"><span><i></i> Saldo simulado</span><span><i></i> Total aportado</span></div>
+        </div>
+      </div>
+      <details class="method">
+        <summary>Ver a fórmula usada no simulador</summary>
+        <p>Convertemos a taxa anual <b>r</b> na taxa mensal equivalente <b>i = (1 + r)<sup>1/12</sup> − 1</b>. A cada mês, atualizamos o saldo pela fórmula <b>S<sub>novo</sub> = S<sub>anterior</sub> × (1 + i) + A</b>, em que <b>A</b> é o aporte feito no fim do mês. O ganho ou perda é a diferença entre o saldo final e o total aportado.</p>
+      </details>
+      <p class="sim-note">Modelo com taxa constante e reinvestimento integral. As taxas são hipotéticas e servem para demonstrar a fórmula. A simulação desconsidera inflação, taxas e impostos. Os retornos reais variam e podem ser negativos.</p>
+    </div>
+  </section>
+
+  <section id="roteiro" class="closing section shell" aria-labelledby="close-title">
+    <div class="closing-main">
+      <p class="eyebrow"><span></span> APRESENTAÇÃO PARA A TURMA</p>
+      <h2 id="close-title">Como apresentar <em>o Banco Vértice.</em></h2>
+      <p>Abra com a campanha, explique as cinco modalidades com um exemplo e use a carteira de R$ 10.000 para mostrar como objetivo, prazo e risco orientam as escolhas. Para encerrar, troque o cenário do simulador e pergunte à turma o que mudou no saldo.</p>
+    </div>
+    <div class="closing-prompts">
+      <h3>Propostas de abordagem</h3>
+      <ol>
+        <li><a href="#inicio">Criar um nome e uma logomarca para o banco.</a></li>
+        <li><a href="#fundos">Escolher cinco investimentos para oferecer aos clientes.</a></li>
+        <li><a href="#fundos">Explicar como funciona cada investimento.</a></li>
+        <li><a href="#fundos">Apresentar as vantagens e os riscos de cada modalidade.</a></li>
+        <li><a href="#campanha">Criar uma propaganda para atrair investidores.</a></li>
+        <li>Apresentar o banco para a turma.</li>
+      </ol>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="shell footer">
+    <div><a class="logo" href="#inicio"><span class="logo-mark" aria-hidden="true"><svg><use href="#mark"/></svg></span>Banco Vértice<span class="dot" aria-hidden="true">.</span></a>
+      <p id="integrantes">
+      Davi Lima | Marco Antônio | Lucas Gonçalves
+    </p>
+    </div>
+    <div class="sources"><strong>Fontes para consulta</strong><div><a href="https://www.b3.com.br/pt/para-voce/tipos-de-investimentos/renda-variavel/fiis" target="_blank" rel="noopener noreferrer">B3 · FIIs</a><a href="https://www.b3.com.br/pt_br/produtos-e-servicos/negociacao/renda-variavel/etf/" target="_blank" rel="noopener noreferrer">B3 · ETFs</a><a href="https://www.tesourodireto.com.br/" target="_blank" rel="noopener noreferrer">Tesouro Direto</a><a href="https://fgc.org.br/" target="_blank" rel="noopener noreferrer">FGC</a><a href="https://www.gov.br/investidor/pt-br" target="_blank" rel="noopener noreferrer">CVM</a></div></div>
+  </div>
+</footer>
+</body>
+</html>
